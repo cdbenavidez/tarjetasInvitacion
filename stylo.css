@@ -1,0 +1,377 @@
+/* Estilos generales */
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Clase para elementos de audio */
+.audio {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+.audio.playing {
+    animation: bounce 0.5s infinite alternate; /* Agrega la animación de salto */
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Altura máxima del salto */
+    }
+}
+.botonAudio {
+    width: 2cm;
+    height: 2cm;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estilo para la sección de la portada */
+.portada {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-image: url('/img/more15.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.logo-portada {
+    padding: 40px;
+}
+
+.logo-title {
+    font-size: 4em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.logo-subtitle {
+    font-size: 1.5em;
+}
+
+.scroll-down {
+    display: block;
+    font-size: 24px;
+    color: #FF00FF;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.scroll-down:hover {
+    color: #FF1493;
+}
+
+/* Estilo para la sección de la cuenta regresiva */
+.cuenta-regresiva {
+    background-color: #FF00FF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.cuenta-regresiva p:first-child {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.cuenta-regresiva p:last-child {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+/* Estilo para la sección de Ceremonia y Fiesta */
+.ceremonia-fiesta {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.ceremonia-fiesta img {
+    width: 6em;
+    height: auto;
+    animation: fadeInOut 2s infinite;
+}
+
+.ceremonia-fiesta h4 {
+    font-size: 3rem;
+    color: black;
+    margin: 10px 0;
+}
+
+.ceremonia-fiesta p {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.ceremonia-fiesta .btn {
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeInOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilo para la sección de la galería */
+.galeria {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+}
+
+.item-galeria {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: calc(23% - 20px);
+    box-sizing: border-box;
+}
+
+.item-galeria img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Estilo para la sección Confirmar Asistencia */
+.confirmar-asistencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.confirmar-asistencia h4 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.confirmar-asistencia p {
+    font-size: 2rem;
+}
+
+.confirmar-asistencia .btn {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.confirmar-asistencia .btn:hover {
+    background-color: darkgreen;
+}
+
+/* Estilo para la sección Dress Code */
+.dresscode {
+    background-color: #FF00FF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.dresscode img {
+    width: 12rem;
+    animation: bounce 2s infinite;
+}
+
+.dresscode h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dresscode p {
+    font-size: 1.5rem;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Estilo para la sección Instagram */
+.parallax-instagram {
+    position: relative;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+.parallax-instagram::before {
+    content: "";
+    background: linear-gradient(to top, rgba(46, 56, 61, 0.8), rgb(37, 43, 46)), url(/img/air-dance-dj-dutch-wallpaper-preview.webp);
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.parallax-instagram img {
+    width: 12rem;
+    animation: bounce-in 1s ease infinite;
+}
+
+.parallax-instagram h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.parallax-instagram p, .parallax-instagram .hashtag {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.parallax-instagram .btn {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+@keyframes bounce-in {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Estilo para la sección Canciones */
+.canciones {
+    background-color: #FF00FF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.canciones img {
+    width: 12rem;
+    animation: bounce-in 1s ease infinite;
+}
+
+.canciones h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.canciones p {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.canciones .btn {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 2rem;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+/* Estilo para la sección CBU */
+.cbu {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.cbu img {
+    width: 12rem;
+    animation: bounce-in 1s ease infinite;
+}
+
+.cbu p {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* Estilo para la sección Gracias */
+.gracias {
+    background-color: #FF00FF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.gracias p {
+    font-size: 2rem;
+}
+
+/* Estilo para la sección Contacto */
+.contacto {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.contacto p, .contacto ul {
+    font-size: 1rem;
+}
+
+.contacto ul li:last-child a {
+    color: green;
+}
