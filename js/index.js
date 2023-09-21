@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function mostrarCuentaRegresiva() {
-        const fechaFiesta = new Date(2023, 10, 25, 21, 0, 0); // Noviembre (0-11)
+        const fechaFiesta = new Date(2023, 9, 25, 21, 0, 0); // Noviembre (0-11)
         const fechaActual = new Date();
         const diferencia = fechaFiesta - fechaActual;
         const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));

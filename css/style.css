@@ -1,4 +1,9 @@
-/* Estilos generales */
+
+@media screen and (max-width: 768px) {
+    .item-galeria {
+        flex: 0 0 calc(100% - 2%);
+    }
+}/* Estilos generales */
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
@@ -9,8 +14,8 @@
 /* Clase para elementos de audio */
 .audio {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 10%;
+    left: 90%;
     z-index: 1;
 }
 .audio.playing {
@@ -25,8 +30,8 @@
     }
 }
 .botonAudio {
-    width: 2cm;
-    height: 2cm;
+    width: 80%;
+    height: 80%;
     cursor: pointer;
 }
 
@@ -46,35 +51,31 @@
     color: white;
     text-align: center;
     background-image: url('/img/more15.jpg');
-    background-size: cover;
+    background-size: auto 100%;
     background-position: center center;
+    border: 0.2rem solid #FF00FF;
+    padding: 2% 5%; 
+    margin: 2%;
+    
 }
 
 .logo-portada {
-    padding: 40px;
+    padding: 2%;
 }
 
 .logo-title {
-    font-size: 4em;
-    margin-bottom: 10px;
+    font-size: 5em;
+    margin-bottom: 1rem;
     font-weight: bold;
+    -webkit-text-stroke: 0.2rem #ff00ff; /* Borde de color fucsia con un grosor de 2 píxeles (para navegadores WebKit) */
+     
+    
 }
 
 .logo-subtitle {
-    font-size: 1.5em;
-}
-
-.scroll-down {
-    display: block;
-    font-size: 24px;
-    color: #FF00FF;
-    text-align: center;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.scroll-down:hover {
-    color: #FF1493;
+    font-size: 3.5em;
+    color: #fff; /* Color del texto interior */
+  -webkit-text-stroke: 0.2rem #ff00ff;
 }
 
 /* Estilo para la sección de la cuenta regresiva */
@@ -84,6 +85,9 @@
     text-align: center;
     padding: 20px;
     font-size: 2rem;
+    border: 2px solid green;
+    padding: 2%; 
+    margin: 2;
 }
 
 .cuenta-regresiva p:first-child {
@@ -101,7 +105,11 @@
     background-color: white;
     text-align: center;
     padding: 20px;
-}
+    border: 2px solid #FF00FF; 
+    padding: 20px; 
+    margin: 20px;
+   
+  }
 
 .ceremonia-fiesta img {
     width: 6em;
@@ -146,18 +154,28 @@
 
 /* Estilo para la sección de la galería */
 .galeria {
-    background-color: #f5f5f5;
-    padding: 20px 0;
+    background-color: #FF00FF;
+    padding: 2%;
+    border: 0.2rem solid green;
+    padding: 2%; 
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
 
 .item-galeria {
     display: inline-block;
     text-align: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin: 10px;
-    width: calc(23% - 20px);
+    padding: 1%;
+    border:1% solid #ccc;
+    margin: 2%;
+    width: calc(22% - 2%);
     box-sizing: border-box;
+    border: 0.2rem solid green;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .item-galeria img {
@@ -181,6 +199,9 @@
     justify-content: center;
     height: 100vh;
     text-align: center;
+    border:0.2rem solid #FF00FF;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .confirmar-asistencia h4 {
@@ -196,8 +217,8 @@
     background-color: green;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: 1rem;
+    padding: 1% 2%;
     font-size: 2rem;
     text-decoration: none;
 }
@@ -213,6 +234,9 @@
     text-align: center;
     padding: 20px;
     position: relative;
+    border: 0.2rem solid green;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .dresscode img {
@@ -244,6 +268,9 @@
     height: 100vh;
     color: white;
     text-align: center;
+    border: 0.2rem solid #FF00FF;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .parallax-instagram::before {
@@ -272,18 +299,18 @@
 
 .parallax-instagram p, .parallax-instagram .hashtag {
     font-size: 1.5rem;
-    margin-top: 10px;
+    margin-top: 1%;
 }
 
 .parallax-instagram .btn {
     background-color: green;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: 1rem;
+    padding: 1% 2%;
     font-size: 1.5rem;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 2%;
 }
 
 @keyframes bounce-in {
@@ -303,7 +330,10 @@
     background-color: #FF00FF;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 2%;
+    border: 0.2rem solid green;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .canciones img {
@@ -318,18 +348,18 @@
 
 .canciones p {
     font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 1%;
 }
 
 .canciones .btn {
     background-color: green;
     color: white;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
+    border-radius: 1rem;
+    padding: 1% 2%;
     font-size: 2rem;
     text-decoration: none;
-    margin-top: 20px;
+    margin-top: 2%;
 }
 
 /* Estilo para la sección CBU */
@@ -337,7 +367,10 @@
     background-color: green;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 2%;
+    border: 0.2rem solid #FF00FF;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .cbu img {
@@ -347,7 +380,7 @@
 
 .cbu p {
     font-size: 2rem;
-    margin-top: 10px;
+    margin-top: 1%;
 }
 
 /* Estilo para la sección Gracias */
@@ -355,7 +388,10 @@
     background-color: #FF00FF;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 2%;
+    border: 0.2rem solid green;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .gracias p {
@@ -366,6 +402,9 @@
 .contacto {
     text-align: left;
     padding-left: 20px;
+    border: 0.2rem solid #FF00FF;
+    padding: 2%; 
+    margin: 2%;
 }
 
 .contacto p, .contacto ul {
